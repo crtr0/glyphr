@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+	<head>
+		<title>I ♥ Javascript</title>
+		<style>
+			#stuff { font-size:5em;}
+		</style>
+	</head>
+	<body>
+		<input type="text" id="stuff"></input>
+
+		<script src="/symbolista.js" charset="utf-8"></script>
+		<script src="http://code.jquery.com/jquery.min.js"></script>
+		<script>
+			$('#stuff').keypress(function() {
+				$('#stuff').val(symbolista.transcode($('#stuff').val()));
+			});
+		</script>
+	</body>
+</html>

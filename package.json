@@ -1,0 +1,22 @@
+{
+  "author": "Carter Rabasa <carter@twilio.com> (http://twitter.com/carterrabasa)",
+  "name": "symbolista",
+  "description": "Converts words like \"heart\" into ♥",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/crabasa/symbolista.git"
+  },
+  "engines": {
+    "node": "~0.6.10"
+  },
+  "dependencies": {
+    "node-static": "*"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "subdomain": "symbolista",
+  "scripts": {
+    "start": "server.js"
+  }
+}
