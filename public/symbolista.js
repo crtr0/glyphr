@@ -1,4 +1,3 @@
-
 (function(exports){
 
    var map = {
@@ -8,6 +7,7 @@
      'snowman': '☃',
      'copyright': '©',
      'registered': '®',
+     'pencil': '✎',
      'eject': '⏏',
      'star' : '★',
      'phone': '☎',
