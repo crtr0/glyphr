@@ -1,14 +1,21 @@
-var http = require('http'),
+﻿var http = require('http'),
     url = require('url'),
-    unitranscode = require('./unitranscode');
+    static = require('node-static'),
+    sym = require('./public/symbolista');
+
+var fileServer = new static.Server('./public');
 
 var server = http.createServer(function (request, response) {
-  console.log(request.url);
-  response.writeHead(200, {"Content-Type": "application/json;charset=UTF-8"});
-  var word = url.parse(request.url, true).query.word;
-  console.log(word);
-  var result = {input: word, output: unitranscode(word) };
-  response.end(JSON.stringify(result));
+  var u = url.parse(request.url, true);
+  if (u.pathname === '/transcode' && u.query.str) {
+    response.writeHead(200, {"Content-Type": "text/plain;charset=utf-8"});
+    var str = url.parse(request.url, true).query.str;
+    var result = {input: str, output: sym.transcode(str) };
+    response.end(JSON.stringify(result));
+  }
+  else {
+    fileServer.serve(request, response);
+  }
 });
 
 server.listen(process.env.PORT || 3000);
