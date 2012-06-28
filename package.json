@@ -2,7 +2,7 @@
   "author": "Carter Rabasa <carter@twilio.com> (http://twitter.com/carterrabasa)",
   "name": "symbolista",
   "description": "Converts words like \"heart\" into ♥",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "repository": {
     "type": "git",
     "url": "git://github.com/crabasa/symbolista.git"

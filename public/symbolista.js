@@ -1,6 +1,9 @@
 (function(exports){
 
    var map = {
+     // 2-word phrases must go first
+     'love hotel': '🏩', 
+     // single words
      'love': "♥",
      'cloud': '☁',
      'poop': '💩',
@@ -27,8 +30,8 @@
      'flag': '⚑',
      'justice': '⚖',
      'warning': '⚠',
-     'baseball': '⚾',
-     
+     'baseball': '⚾'
+
    };
 
    exports.transcode = function(str) {
@@ -36,7 +39,7 @@
      Object.keys(map).forEach(function(key) {
        out = out.replace(key, map[key]);
      });
-     console.log(out);
+     //console.log(out);
      return out;
    };
 
