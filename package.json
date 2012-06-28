@@ -1,11 +1,11 @@
 {
   "author": "Carter Rabasa <carter@twilio.com> (http://twitter.com/carterrabasa)",
-  "name": "symbolista",
+  "name": "glyphr",
   "description": "Converts words like \"heart\" into ♥",
   "version": "0.0.6",
   "repository": {
     "type": "git",
-    "url": "git://github.com/crabasa/symbolista.git"
+    "url": "git://github.com/crabasa/glyphr.git"
   },
   "engines": {
     "node": "~0.6.10"
@@ -15,7 +15,7 @@
   },
   "devDependencies": {},
   "optionalDependencies": {},
-  "subdomain": "symbolista",
+  "subdomain": "glyphr",
   "scripts": {
     "start": "server.js"
   }
