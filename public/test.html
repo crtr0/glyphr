@@ -1,18 +1,18 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Symbolista Test Page</title>
+		<title>Glyphr Test Page</title>
 		<style>
 			#stuff { font-size:5em;}
 		</style>
 	</head>
 	<body>
 		<input type="text" id="stuff"></input>
-		<script src="/symbolista.js" charset="utf-8"></script>
+		<script src="/glyphr.js" charset="utf-8"></script>
 		<script src="http://code.jquery.com/jquery.min.js"></script>
 		<script>
 			$('#stuff').keypress(function() {
-				$('#stuff').val(symbolista.transcode($('#stuff').val()));
+				$('#stuff').val(glyphr.transcode($('#stuff').val()));
 			});
 		</script>
 	</body>
