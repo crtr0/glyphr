@@ -1,7 +1,7 @@
 (function(exports){
 
    var map = {
-     'heart': "♥",
+     'love': "♥",
      'cloud': '☁',
      'poop': '💩',
      'snowman': '☃',
@@ -11,7 +11,24 @@
      'eject': '⏏',
      'star' : '★',
      'phone': '☎',
-     'shamrock': '☘'
+     'luck': '☘',
+     'sun': '☀',
+     'rain': '☔',
+     'coffee': '☕',
+     'poison': '☠',
+     'sad': '☹',
+     'happy': '☻',
+     'king': '♚',
+     'queen': '♛',
+     'diamond': '♦',
+     'music': '♪',
+     'recycle': '♻',
+     'dice': '⚄',
+     'flag': '⚑',
+     'justice': '⚖',
+     'warning': '⚠',
+     'baseball': '⚾',
+     
    };
 
    exports.transcode = function(str) {
