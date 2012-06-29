@@ -20,7 +20,11 @@ It's a browser JS library!
 * URL: http://glyphr.jit.su/symbolista.js
 * Test page: http://glyphr.jit.su/test.html
 
+It's a Chrome Extension!
+------------------------
+It's in the Chrome Store (search for "glyphr") but the source code is posted here.  
+
+
 TODO
 ----
-* Chrome Extension (for web apps like Twitter)
 * More glyphs!

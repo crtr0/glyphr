@@ -1,7 +1,7 @@
 ﻿var http = require('http'),
     url = require('url'),
     static = require('node-static'),
-    sym = require('./public/symbolista');
+    sym = require('./public/glyphr');
 
 var fileServer = new static.Server('./public');
 
