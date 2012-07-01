@@ -1,6 +1,6 @@
 {
   "name" : "Glyphr for Chrome",
-  "version" : "0.1.1",
+  "version" : "0.1.2",
   "description" : "Convert words like 'love' to ♥ in <textarea>'s",
   "background" : {
     "scripts": ["background.js"]

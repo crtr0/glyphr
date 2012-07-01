@@ -11,7 +11,7 @@
 		<script src="/glyphr.js" charset="utf-8"></script>
 		<script src="http://code.jquery.com/jquery.min.js"></script>
 		<script>
-			$('#stuff').keypress(function() {
+			$('#stuff').keyup(function() {
 				$('#stuff').val(glyphr.transcode($('#stuff').val()));
 			});
 		</script>
