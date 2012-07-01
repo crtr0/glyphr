@@ -1,4 +1,4 @@
-chrome.extension.sendRequest("show", function(response) {});
+chrome.extension.sendRequest({command: "show"}, function(response) {});
 
 
 chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
@@ -7,9 +7,16 @@ chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
 		['textarea'].forEach(function(s) {
 		   $(s).each(function(i) {
 		   	  console.log("Attaching to: ", s, i);
-		      $(this).keypress(function() {
-		      	 console.log("*");
-			     $(this).val(glyphr.transcode($(this).val()));
+		      $(this).keyup(function() {
+		      	 var that = this;
+		      	 console.log($(that).val());
+		      	 chrome.extension.sendRequest({command: "transcode", val: $(that).val()}, function(response) {
+		      	 	console.log(response);
+		      	 	//console.log(that);
+		      	 	//console.log($(that));
+		      	 	$(that).val(response);
+		      	 });
+			     
 		   	  });
 		   });
 		});
@@ -18,7 +25,7 @@ chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
 		['textarea'].forEach(function(s) {
 		   $(s).each(function(i) {
 		   	  console.log("Detaching: ", s, i);
-		      $(this).off("keypress");
+		      $(this).off("keyup");
 		   });
 		});
 	}

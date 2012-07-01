@@ -16,7 +16,7 @@
         "http://*/*",
         "https://*/*"
       ],
-      "js" : ["jquery.min.js", "glyphr.js", "contentscript.js"],
+      "js" : ["jquery.min.js", "contentscript.js"],
       "run_at" : "document_idle",
       "all_frames" : false
     }
@@ -25,5 +25,6 @@
     "48" : "glyphr-48.png",
     "128" : "glyphr-128.png"
   },
+  "content_security_policy": "script-src 'self' https://glyphr.jit.su; object-src 'self'",
   "manifest_version": 2
 }
