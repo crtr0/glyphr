@@ -7,7 +7,9 @@ chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
 		['textarea'].forEach(function(s) {
 		   $(s).each(function(i) {
 		   	  console.log("Attaching to: ", s, i);
-		      $(this).keyup(function() {
+		      console.log(this);
+		      $(this).blur(function() {
+		      //i.blur(function() {
 		      	 var that = this;
 		      	 console.log($(that).val());
 		      	 chrome.extension.sendRequest({command: "transcode", val: $(that).val()}, function(response) {
@@ -25,7 +27,7 @@ chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
 		['textarea'].forEach(function(s) {
 		   $(s).each(function(i) {
 		   	  console.log("Detaching: ", s, i);
-		      $(this).off("keyup");
+		      $(this).blur(function(){});
 		   });
 		});
 	}

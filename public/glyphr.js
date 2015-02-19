@@ -1,41 +1,50 @@
 (function(exports){
 
    var map = {
-     'lovehotel': '🏩', 
-     'love': "♥",
-     'cloud': '☁',
-     'poop': '💩',
-     'snowman': '☃',
+     'baseball': '⚾',
+     'castle': '♜',
      'copyright': '©',
-     'registered': '®',
-     'pencil': '✎',
-     'eject': '⏏',
-     'star' : '★',
-     'phone': '☎',
-     'luck': '☘',
-     'sun': '☀',
-     'rain': '☔',
+     'cloud': '☁',
+     'cut': '✂',
      'coffee': '☕',
-     'poison': '☠',
-     'sad': '☹',
-     'happy': '☻',
-     'king': '♚',
-     'queen': '♛',
      'diamond': '♦',
-     'music': '♪',
-     'recycle': '♻',
      'dice': '⚄',
+     'eject': '⏏',
      'flag': '⚑',
+     'happy': '☻',
      'justice': '⚖',
+     'king': '♚',
+     'knight': '♞',
+     'larr': '←',
+     'lod': "ಠ_ಠ",
+     'love': "♥",
+     'luck': '☘',
+     'luvhotel': '🏩', 
+     'music': '♪',
+     'peace': '☮',
+     'pencil': '✎',
+     'plane': '✈',
+     'poison': '☠',
+     'poop': '💩',
+     'phone': '✆',
+     'queen': '♛',
+     'rain': '☔',
+     'rarr': '→',
+     'recycle': '♻',
+     'registered': '®',
+     'sad': '☹',
+     'snowman': '☃',
+     'star' : '★',
+     'sun': '☀',
      'warning': '⚠',
-     'baseball': '⚾'
-
+     'zen': '☯'
    };
 
    exports.transcode = function(str) {
      var out = str;
      Object.keys(map).forEach(function(key) {
-       out = out.replace(key, map[key]);
+       var regexp = new RegExp(' ' + key, "ig");
+       out = out.replace(regexp, ' ' + map[key]);
      });
      //console.log(out);
      return out;

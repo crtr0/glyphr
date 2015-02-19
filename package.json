@@ -2,16 +2,16 @@
   "author": "Carter Rabasa <carter@twilio.com> (http://twitter.com/carterrabasa)",
   "name": "glyphr",
   "description": "Converts words like \"heart\" into ♥",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "repository": {
     "type": "git",
-    "url": "git://github.com/crabasa/glyphr.git"
+    "url": "git://github.com/crtr0/glyphr.git"
   },
   "engines": {
     "node": "~0.6.10"
   },
   "dependencies": {
-    "node-static": "*"
+    "node-static": "0.5.9"
   },
   "devDependencies": {},
   "optionalDependencies": {},
